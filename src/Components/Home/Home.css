@@ -1,0 +1,9 @@
+.homeImg {
+    margin-top: 50px;
+    width: 60%;
+    animation: home 5s infinite;
+}
+
+@keyframes home {
+    30%{transform: rotate(8deg)}
+}
