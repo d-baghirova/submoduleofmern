@@ -1,26 +1,24 @@
 import "./Article.css"
 
 function Article({article, title}) {
-    const articleKeys = Object.keys(article);
     const articleVals = Object.values(article);
- 
+
     const showArticle = () => {
-        return (
-            articleVals.map((a,i) => { 
-                let arr = [];
-                if (articleKeys[i][0] === 'h'){
-                    return <h2 key={i}>{a}</h2>
-                } else if (articleKeys[i][0] === 'p'){
-                    return <p key={i}>{a}</p>
-                } else {
-                    return <img key={i} src={`${process.env.PUBLIC_URL}/assets/images/${a}`} />
-                }}))}
+        let str ='';
+        for (let i = 0; i <= articleVals.length; i++){
+            str += `<div key=${i}>`+articleVals[i]+'</div>'
+        }
+        return str;
+    }
+
     return (
-        <div className="article">
+        <div id="a" className="article">
             <h1>{title}</h1>
-            {showArticle()}
+            <article dangerouslySetInnerHTML={{ __html: showArticle() }}>
+
+            </article>
         </div>
     )
 }
 
-export default Article
+export default Article;
