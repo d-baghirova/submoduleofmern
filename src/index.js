@@ -4,6 +4,9 @@ import './index.css';
 import App from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import 'primereact/resources/primereact.css';  
+import 'primereact/resources/themes/saga-purple/theme.css';   // theme
+import 'primeflex/primeflex.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
